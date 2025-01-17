@@ -51,7 +51,13 @@ done conflict arises
 ### Description
 
 - Create a document from Couchbase Server UI
+done it's called zomatooooo
 - Review the revision IDs and explain the different values in revision IDs
+first id : 1-6c09ee187cece3ab2da390476ac6b48f
+second id : 2-bfa741a85dcfe111c1b0945078f2b049
+third id : 3-8ddf2dade557cc0fdef75eed5b0e28a5
+
+so basically when you append or make changes the first id increases and the second part is a hash or somethiing 
 
 ### Observations
 
