@@ -52,12 +52,28 @@ done conflict arises
 
 - Create a document from Couchbase Server UI
 done it's called zomatooooo
-- Review the revision IDs and explain the different values in revision IDs
-first id : 1-6c09ee187cece3ab2da390476ac6b48f
-second id : 2-bfa741a85dcfe111c1b0945078f2b049
-third id : 3-8ddf2dade557cc0fdef75eed5b0e28a5
+with revid of 2 cause the import docs is true 
 
-so basically when you append or make changes the first id increases and the second part is a hash or somethiing 
+- Review the revision IDs and explain the different values in revision IDs
+on the postman : 
+first id : 1-622c50a7af0ecb76dff71baa74d13333
+first ui : 1-181b726654b000000000000000000000
+
+"revs": [
+          "1-622c50a7af0ecb76dff71baa74d13333"
+        ]
+when accessing it : 
+rev cb  : 3-181b72b651f700000000000002000006
+revs xattr : [
+          "1-622c50a7af0ecb76dff71baa74d13333",
+          "2-071a60efac585dd912341b6f7dd07667"
+        ]
+
+
+
+meanwhile using the ui you basically get the revision id starting with 2 because of the sync-gateway updation results in increments of 2.
+
+so basically when you append or make changes the first id increases and the second part is a hash of the doc 
 
 ### Observations
 
@@ -76,43 +92,47 @@ this is from the mobile system:
 }
 
 1. enable_shared_bucket_access: false, import_docs: false
+the document both created on the ui and postman have rev id of 1 and 1 but when i call thru the postman it denies 
 {
-    "id": "135e798ed8c5ed6d9d96222ec4fea75c",
-    "ok": true,
-    "rev": "1-ad2a21a54435bc855e88a3594813d49a"
+  "meta": {
+    "id": "ui",
+    "rev": "1-181b71da401d00000000000002000006",
+    "expiration": 0,
+    "flags": 33554438,
+    "type": "json"
+  },
+  "xattrs": {}
 }
 {
-    "_id": "zomatoo",
-    "_rev": "3-8ddf2dade557cc0fdef75eed5b0e28a5",
-    "click": "to edit nothing here but need that gift card",
-    "with JSON": "there are no reserved field names"
+    "error": "not_found",
+    "reason": "Not imported"
 }
+but on the doc created thru the postman 
 {
     "_id": "3",
     "_rev": "1-622c50a7af0ecb76dff71baa74d13333",
     "key1": "value1",
     "key2": "value2"
 }
+works 
 
 
 2. enable_shared_bucket_access: false, import_docs: true
 {
-    "id": "ca25cdf47c38db94b2c14f4c928421cc",
-    "ok": true,
-    "rev": "1-6c499fce246d86f33ea6759fc7c7a007"
+  "meta": {
+    "id": "zomatoo",
+    "rev": "1-181b72da660800000000000002000006",
+    "expiration": 0,
+    "flags": 33554438,
+    "type": "json"
+  },
+  "xattrs": {}
 }
-{
-    "_id": "zomatoo",
-    "_rev": "3-8ddf2dade557cc0fdef75eed5b0e28a5",
-    "click": "to edit nothing here but need that gift card",
-    "with JSON": "there are no reserved field names"
-}
-{
-    "_id": "3",
-    "_rev": "1-622c50a7af0ecb76dff71baa74d13333",
-    "key1": "value1",
-    "key2": "value2"
-}
+
+when i pull in postman : 
+doesn't give the document my man , no xattr as well 
+
+
 
 3. enable_shared_bucket_access: true, import_docs: false
 {
