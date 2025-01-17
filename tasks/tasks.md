@@ -36,9 +36,13 @@ yessir done , modified it as well
 ### Description
 
 - This task continues from the previous task
-- Create a dummy document from CB UI
+- Create a dummy document from CB UI jsut added it as defauult
+ddone it 
 - Get the document contents using Postman
+yes done 
+0.0.0.0:4985/db1/zomatoo
 - Delete the document using Postman
+done conflict arises
 
 ### Observations
 
