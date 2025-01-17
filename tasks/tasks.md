@@ -23,8 +23,11 @@ WARN[0000] /Users/ramesh.d/Documents/Projects/sgw-training/docker-compose.yml: t
  ✔ Container cb-sgw  Running 
 ```™
 - Create a Database using Postman
+created a new database updated the basic auth
 - Create a Document using Postman
+yessir done by your command
 - Get the document using Postman
+yessir done , modified it as well
 
 ### Observations
 
