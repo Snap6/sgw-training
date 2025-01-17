@@ -69,9 +69,67 @@ so basically when you append or make changes the first id increases and the seco
 
 ```
 1. enable_shared_bucket_access: false, import_docs: false
+{
+    "id": "135e798ed8c5ed6d9d96222ec4fea75c",
+    "ok": true,
+    "rev": "1-ad2a21a54435bc855e88a3594813d49a"
+}
+{
+    "_id": "zomatoo",
+    "_rev": "3-8ddf2dade557cc0fdef75eed5b0e28a5",
+    "click": "to edit nothing here but need that gift card",
+    "with JSON": "there are no reserved field names"
+}
+
+
 2. enable_shared_bucket_access: false, import_docs: true
+{
+    "id": "ca25cdf47c38db94b2c14f4c928421cc",
+    "ok": true,
+    "rev": "1-6c499fce246d86f33ea6759fc7c7a007"
+}
+{
+    "_id": "zomatoo",
+    "_rev": "3-8ddf2dade557cc0fdef75eed5b0e28a5",
+    "click": "to edit nothing here but need that gift card",
+    "with JSON": "there are no reserved field names"
+}
+
 3. enable_shared_bucket_access: true, import_docs: false
+{
+    "id": "a8f1ab19c6c0c327c297ec2afc58f16a",
+    "ok": true,
+    "rev": "1-e55e3ca339896bb8f563060539ffc865"
+}
+{
+    "_id": "zomatoo",
+    "_rev": "3-8ddf2dade557cc0fdef75eed5b0e28a5",
+    "click": "to edit nothing here but need that gift card",
+    "with JSON": "there are no reserved field names"
+}
+when you try to create document it's says : 
+{
+    "error": "Method Not Allowed",
+    "reason": ""
+}
 4. enable_shared_bucket_access: true, import_docs: true
+{
+    "db_name": "db1",
+    "update_seq": 8,
+    "committed_update_seq": 8,
+    "instance_start_time": 1737104586619159,
+    "compact_running": false,
+    "purge_seq": 0,
+    "disk_format_version": 0,
+    "state": "Online",
+    "server_uuid": "813fe4cc7046b2ba0d55bc8821f2b429"
+}
+{    "_id": "zomatoo",
+    "_rev": "3-8ddf2dade557cc0fdef75eed5b0e28a5",
+    "click": "to edit nothing here but need that gift card",
+    "with JSON": "there are no reserved field names"
+}
+
 ```
 
 ### Observations
