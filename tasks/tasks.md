@@ -68,6 +68,13 @@ so basically when you append or make changes the first id increases and the seco
 - Test the following configurations of SGW database:
 
 ```
+this is from the mobile system:
+{
+    "id": "3",
+    "ok": true,
+    "rev": "1-622c50a7af0ecb76dff71baa74d13333"
+}
+
 1. enable_shared_bucket_access: false, import_docs: false
 {
     "id": "135e798ed8c5ed6d9d96222ec4fea75c",
@@ -79,6 +86,12 @@ so basically when you append or make changes the first id increases and the seco
     "_rev": "3-8ddf2dade557cc0fdef75eed5b0e28a5",
     "click": "to edit nothing here but need that gift card",
     "with JSON": "there are no reserved field names"
+}
+{
+    "_id": "3",
+    "_rev": "1-622c50a7af0ecb76dff71baa74d13333",
+    "key1": "value1",
+    "key2": "value2"
 }
 
 
@@ -94,6 +107,12 @@ so basically when you append or make changes the first id increases and the seco
     "click": "to edit nothing here but need that gift card",
     "with JSON": "there are no reserved field names"
 }
+{
+    "_id": "3",
+    "_rev": "1-622c50a7af0ecb76dff71baa74d13333",
+    "key1": "value1",
+    "key2": "value2"
+}
 
 3. enable_shared_bucket_access: true, import_docs: false
 {
@@ -107,11 +126,14 @@ so basically when you append or make changes the first id increases and the seco
     "click": "to edit nothing here but need that gift card",
     "with JSON": "there are no reserved field names"
 }
-when you try to create document it's says : 
 {
-    "error": "Method Not Allowed",
-    "reason": ""
+    "_id": "3",
+    "_rev": "1-622c50a7af0ecb76dff71baa74d13333",
+    "key1": "value1",
+    "key2": "value2"
 }
+
+
 4. enable_shared_bucket_access: true, import_docs: true
 {
     "db_name": "db1",
@@ -128,6 +150,12 @@ when you try to create document it's says :
     "_rev": "3-8ddf2dade557cc0fdef75eed5b0e28a5",
     "click": "to edit nothing here but need that gift card",
     "with JSON": "there are no reserved field names"
+}
+{
+    "_id": "3",
+    "_rev": "1-622c50a7af0ecb76dff71baa74d13333",
+    "key1": "value1",
+    "key2": "value2"
 }
 
 ```
