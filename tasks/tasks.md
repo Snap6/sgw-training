@@ -5,7 +5,10 @@
 ### Description
 
 - Setup SGW using setup 1
+done 
 - Use Postman to check if SGW is working (use Admin PORT)
+yessir
+
 
 ### Observations
 
@@ -13,7 +16,12 @@
 
 ### Description
 
-- Setup SGW using setup 2
+- Setup SGW using setup 2 
+```
+WARN[0000] /Users/ramesh.d/Documents/Projects/sgw-training/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion 
+[+] Running 1/0
+ ✔ Container cb-sgw  Running 
+```™
 - Create a Database using Postman
 - Create a Document using Postman
 - Get the document using Postman
